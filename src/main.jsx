@@ -10,7 +10,7 @@ import { QuizProvider } from "./QuizContext.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <QuizProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/birthday-surprise">
         <Routes>
           <Route path="/" element={<Intro />} />
           <Route path="/quiz/:number" element={<QuizPage />} />
