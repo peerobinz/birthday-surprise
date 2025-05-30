@@ -1,0 +1,117 @@
+/* src/GiftBox.css */
+
+.gift-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #f8bbd0, #f48fb1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Kanit', sans-serif;
+  color: #3b0a45;
+  
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.gift-box {
+  width: 25vw;
+  max-width: 160px;
+  height: 25vw;
+  max-height: 160px;
+  background: #ec407a;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(236, 64, 122, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gift-box:hover {
+  transform: scale(1.5) rotate(-15deg);
+  box-shadow: 0 15px 25px rgba(236, 64, 122, 0.8);
+}
+
+/* ใช้ clamp สำหรับ font-size ที่ responsive */
+.gift-box {
+  font-size: clamp(3rem, 10vw, 5rem);
+}
+
+.open-btn {
+  margin-top: 1.5rem;
+  background-color: #d81b60;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.7rem 2.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.open-btn:hover {
+  background-color: #ad1457;
+}
+
+.surprise-text {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #880e4f;
+}
+
+.surprise-subtext {
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  margin-bottom: 1.5rem;
+  color: #4a148c;
+}
+
+.surprise-link {
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  color: #ad1457;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.open-btn-back {
+  margin-top: 2rem;
+  background-color: #6a1b9a;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.7rem 2.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.open-btn-back:hover {
+  background-color: #4a148c;
+}
+
+/* Media Query สำหรับมือถือ */
+@media (max-width: 480px) {
+  .gift-container {
+    padding: 1rem;
+  }
+
+  .gift-box {
+    width: 60vw;
+    height: 60vw;
+    font-size: clamp(4rem, 12vw, 6rem);
+  }
+
+  .open-btn,
+  .open-btn-back {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,137 @@
+/* QuizPage.css */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background: #fff0f6; /* สีพื้นหลังนวลๆ */
+  font-family: "Kanit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  width: 375px;
+  max-width: 480px;
+  padding: 25px;
+  background: #fff9f9;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
+  color: #333;
+  box-sizing: border-box;
+  text-align: center; /* ข้อความกึ่งกลาง */
+}
+
+/* ... ส่วนอื่นๆ ของ CSS ตามเดิม ... */
+.quiz-question {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #d6336c;
+}
+
+.quiz-choice {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px 15px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #ffe6f0;
+  color: #a3003d;
+  text-align: left; /* ให้ข้อความตัวเลือกชิดซ้าย */
+}
+
+.quiz-choice input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.quiz-choice:hover {
+  background-color: #ffb3cc;
+  border-color: #d6336c;
+  color: #6a0036;
+}
+
+.quiz-choice input[type="radio"]:checked + label,
+.quiz-choice input[type="radio"]:checked {
+  border-color: #d6336c;
+  background-color: #ff99c2;
+  color: #400029;
+  font-weight: 600;
+}
+
+.quiz-button {
+  width: 100%;
+  padding: 13px 0;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #d6336c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Kanit', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(214, 51, 108, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.quiz-button:hover {
+  background-color: #b02a57;
+}
+/* สร้าง animation สั่น */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+.shake {
+  animation: shake 1.5s;
+  border: 2px solid #e03131; /* ขอบสีแดงแจ้งเตือน */
+  box-shadow: 0 10px 10px #e03131;
+}
+
+.error-message {
+  color: #e03131;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    transform: scale(1);
+    border-color: #28a745;
+  }
+  50% {
+    box-shadow: 0 0 15px 10px rgba(40, 167, 69, 0.5);
+    transform: scale(1.05);
+    border-color: #28a745;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    transform: scale(1);
+    border-color: #28a745;
+  }
+}
+
+.correct {
+  animation: pulse 0.7s;
+  border: 2px solid #28a745;
+}
+
+/* ข้อความแจ้งเตือนตอบผิด */
+.error-message {
+  color: #e03131;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: center;
+}

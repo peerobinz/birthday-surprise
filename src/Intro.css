@@ -1,0 +1,42 @@
+.intro-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #fce4ec, #f8bbd0);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+}
+
+.intro-title {
+  font-size: 2.5rem;
+  color: #880e4f;
+  margin-bottom: 1rem;
+}
+
+.intro-description {
+  font-size: 1.2rem;
+  color: #4a148c;
+  margin-bottom: 2rem;
+}
+
+.intro-button {
+  background-color: #ec407a;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Kanit', sans-serif;
+}
+
+.intro-button:hover {
+  background-color: #d81b60;
+}
