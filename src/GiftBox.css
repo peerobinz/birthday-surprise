@@ -11,7 +11,6 @@
   padding: 2rem;
   font-family: 'Kanit', sans-serif;
   color: #3b0a45;
-  
   text-align: center;
   box-sizing: border-box;
 }
@@ -27,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10vw;
+  font-size: clamp(3rem, 10vw, 5rem);
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -35,11 +34,6 @@
 .gift-box:hover {
   transform: scale(1.5) rotate(-15deg);
   box-shadow: 0 15px 25px rgba(236, 64, 122, 0.8);
-}
-
-/* ใช้ clamp สำหรับ font-size ที่ responsive */
-.gift-box {
-  font-size: clamp(3rem, 10vw, 5rem);
 }
 
 .open-btn {
@@ -96,6 +90,47 @@
   background-color: #4a148c;
 }
 
+/* 📝 การ์ดจดหมายคำอวยพร */
+.letter-card {
+  background: #fff0f6;
+  border: 2px solid #ec407a;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Kanit', sans-serif;
+  color: #4a148c;
+  text-align: left;
+  animation: fadeIn 0.8s ease;
+}
+
+.letter-card h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #880e4f;
+  text-align: center;
+}
+
+.letter-content {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  white-space: pre-line;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Media Query สำหรับมือถือ */
 @media (max-width: 480px) {
   .gift-container {
@@ -114,4 +149,52 @@
     padding: 1rem 0;
     font-size: 1.2rem;
   }
+
+  .letter-card {
+    padding: 1.5rem;
+  }
+
+  .letter-card h2 {
+    font-size: 1.5rem;
+  }
+}
+.envelope {
+  font-size: 6rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: pop 0.5s ease;
+}
+
+.envelope:hover {
+  transform: scale(1.2);
+}
+
+.click-text {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #880e4f;
+  animation: fadeIn 1s ease-in;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
